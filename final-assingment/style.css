@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: #23242a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 2rem;
+}
+header{
+    display:flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #28292d;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    z-index: 10;
+}
+header .logo{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+header .logo img{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+}
+header .navigation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    position: absolute;
+    left: 19%;
+    bottom: 5%;
+    list-style: none;
+}
+header fieldset {
+    margin: 20px 20px;
+}
+header .navigation a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    float: left;
+    padding: 7px 20px 7px 20px;
+    font-size: 17px;
+    text-align: center;
+}
+header .navigation a:hover{
+    color: #0000ff;
+}
+header .user_log {
+    float: right;
+    padding: 20px 30px;
+}
+header .logreg {
+    background: #1e2029;
+    color: #fff;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+header .logreg:hover
+{
+    background-color: #23242a;
+}
+.search
+{
+    width: 600px;
+    height: 50px;
+    position: absolute;
+    top: 11%;
+    left: 34%;
+    z-index: 10;
+}
+.search input
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 0 10px 0 45px;
+    font-size: 20px;
+}
+.search .fa
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #000;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+.searchbox
+{
+    background: #23242a;
+    width: 630px;
+    height: 40px;
+    position: absolute;
+    top: 125px;
+    left: 630px;
+    border-radius: 0px 0px 10px 10px;
+}
+main
+{
+    min-height: 100vh;
+}
+.main_div
+{
+    background-color: #fff;
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 1900px;
+    height: 600px;
+}
+.left_div
+{
+    width: 1200px;
+    height: 600px;
+    float: left;
+}
+.right_div
+{
+    width: 700px;
+    height: 600px;
+    float: right;
+    right: 100px;
+    background-color: #23242a;
+    z-index: 10;
+}
+.slide-photo
+{
+    width: 1200px;
+    height: 600px;
+}
+.slide-photo img
+{
+    width: 1200px;
+    height: 600px;
+    object-fit: cover;
+}
+.slider
+{
+    max-width: 1200px;
+    height: 600px;
+    position: relative;
+    margin: auto;
+}
+.mySlides
+{
+    display: none;
+}
+.prev, .next
+{
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    width: auto;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+.next
+{
+    border-radius: 3px 0 0 3px;
+    right: 700px;
+}
+.prev:hover , .next:hover
+{
+    background-color: rgba(0,0,0, 0.8);
+}
+.fade
+{
+    animation: fade 1.5s;
+}
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+.slide-caption-wrap
+{
+    width: 1200px;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    right: 0;
+    padding-top: 100px;
+    background: linear-gradient(180deg,rgba(0,0,0,0) 0,#000 71%,#000 100%);
+}
+.slide-caption
+{
+    position: relative;
+    padding: 30px;
+    color: #fff;
+    z-index: 10;
+    padding-left: 245px;
+    max-width: 1200px;
+}
+.film-poster
+{
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 120px;
+    padding-bottom: 180px;
+}
+.film-title
+{
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    color: #fff;
+    line-height: 1.3em;
+    font-weight: 600;
+}
+
+.sc-detail
+{
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.sc-detail .scd-item
+{
+    margin-bottom: 5px;
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 12px;
+}
+.sc-desc
+{
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 300;
+    line-height: 1.6em;
+    margin-bottom: 0;
+}
+.sc-btn
+{
+    position: absolute;
+    left: 175px;
+    top: 40px
+}
+.sc-btn .btn-circle
+{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: 0 0 !important;
+}
+.sc-btn .btn-circle i
+{
+    font-size: 18px;
+    color: #f7d200;
+    position: relative;
+    right: -2px;
+}
+.movie-list
+{
+    height: 100%;
+    padding-top: 20px;
+    background-color: #070D2B;
+}
+.movie-list .movie
+{
+    display: block;
+    padding: 0 20px 15px;
+    position: relative;
+    margin: 30px 0 5px;
+    height: 155px;
+}
+.movie-list .movie .film-poster
+{
+    width: 100px;
+    height: 140px;
+    padding-bottom: 140px;
+    position: absolute;
+    top: 0;
+    left: 20px
+}
+.film-poster .film-poster-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+.film-detail
+{
+    padding-left: 120px;
+    min-height: 140px;
+}
+.fd-infor
+{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #aaa;
+    height: 17px;
+}
+a
+{
+    color: #fff;
+    text-decoration: none;
+}
+.fdi-item
+{
+    margin-right: 15px;
+}
+.movie-section
+{
+    width: 1900px;
+    background-color: #23242a;
+    position: absolute;
+    top: 770px;
+    left: 0;
+}
+.movie-sectionx
+{
+    width: 1900px;
+    background-color: #23242a;
+    position: absolute;
+    top: 130px;
+    left: 0;
+}
+.head
+{
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+.left-head
+{
+    margin: 20px;
+    margin-right: 1.5rem!important;
+    float: left;
+}
+.head1
+{
+    color: #fff;
+    border-color: #ffc107;
+    font-size: 22px!important;
+    line-height: 1.2em;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-left: 4px solid #fff;
+    padding-left: 15px;
+}
+.right-btn
+{
+    float: left !important;
+    margin: 20px;
+}
+.right-btn ul
+{
+    width: 200px;
+    height: 35px;
+    border-bottom: none;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.right-btn .fil
+{
+    margin-left: 20px;
+    position: absolute;
+    left: 140px;
+    display: list-item;
+    list-style: none;
+}
+.right-btn .diz
+{
+    margin-left: 20px;
+    position: absolute;
+    left: 250px;
+    display: list-item;
+    list-style: none;
+}
+div
+{
+    display: block;
+}
+.right-btn ul li a
+{
+    font-size: 15px;
+    margin: 5px;
+    text-decoration: none;
+}
+.right-btn ul li a i
+{
+    margin-right: 10px;
+}
+.movie-variety
+{
+    width: 100%;
+    height: 100%;
+}
+#trending-movies
+{
+    width: 100%;
+    height: 100%;
+}
+.film-list-wrap
+{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.itemx
+{
+    background: #121212;
+    width: 200px;
+    height: 380px;
+    margin: 30px 10px 0 20px;
+    position: relative;
+    display: inline-block;
+}
+.film-posterx
+{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 0;
+}
+.film-posterx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    vertical-align: middle;
+    border-style: none;
+}
+.film-posterx a
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: inline-block;
+}
+.film-detailx
+{
+    height: 130px;
+    position: absolute;
+    top: 250px;
+    font-size: .9em;
+    text-align: left;
+    padding: 10px;
+    z-index: 2;
+}
+h3
+{
+    margin-top: 2px;
+}
+.fd-btnx
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+.fd-btnx a
+{
+    text-decoration: none;
+}
