@@ -15,3 +15,16 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("header-scroll");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= 0) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
