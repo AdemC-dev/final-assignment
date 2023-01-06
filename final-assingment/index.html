@@ -11,8 +11,8 @@
 </head>
 <body>
     <div id="main">
-        <div id="header-scroll">
-            <header class="header">
+        <div id="header-scroll" class="row">
+            <header class="header col-12">
                 <div class="logo">
                     <a href="/vsCode/final-assingment/index.html"><img src="/vsCode/final-assingment/images/logo.png" alt="logo"></a>
                 </div>
@@ -127,22 +127,41 @@
                     </fieldset>
                 </nav>
                 <div class="user_log">
-                    <a href=""><button class="logreg">GİRİŞ YAP</button></a>
-                    <a href=""><button class="logreg">KAYIT OL</button></a>
+                        <button class="logreg" id="logreg" onclick="document.getElementById('login').style.display='block'" style="width:auto;">GİRİŞ YAP</button>
+                        <button class="logreg" id="logreg" onclick="document.getElementById('login').style.display='block'" style="width:auto;">KAYIT OL</button>
                 </div>
                 <div class="search">
                     <input type="text" placeholder="Dizi ve Film Ara...">
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
             </header>
-        </div>
-        <div class="login-screen" id="screen">
-            <form action="">
+            <div class="dropdownres">
                 
+            </div>
+        </div>
+        <div class="login-screen" id="login">
+            <form action="#" method="post" class="content animate">
+              <h2>Giriş Yap</h2>
+                <div class="inputx">
+                  <input type="text" required>
+                  <span>Kullanıcı Adı</span>
+                  <i></i>
+                </div>
+                <div class="inputx">
+                  <input type="password" required>
+                  <span>Şifre</span>
+                  <i></i>
+                </div>
+                <div class="log-nav">
+                  <a href="#">Şifremi Unuttum</a>
+                  <a href="#">Kayıt Ol</a>
+                </div>
+                <button id="iptal" onclick="document.getElementById('login').style.display='none'">İptal</button>
+                <input type="submit" value="Giriş Yap" onclick="document.getElementById('login').style.display='block'">
             </form>
         </div>
-        <main>
-            <div class="main_div">
+        <main class="row">
+            <div class="main_div col-3">
                 <div class="left_div">
                     <div class="Slider"> <!--<a href="https://www.youtube.com/watch?v=_nZdmwHrcnw"><ig src="/final-assingment/images/Fellowship-of-the-Ring-poster.jpg" alt="Lotr_fellowship_of_the_ring"></a>-->
                         <div class="mySlides fade">
@@ -279,7 +298,7 @@
                         </div>
                         <div class="movie">
                             <div class="film-poster">
-                                <a title="childhood-s-end" href="/vsCode/final-assingment/movies/fantastik.html">
+                                <a title="fantastik-canavarlar" href="/vsCode/final-assingment/movies/fantastikcan.html">
                                     <img src="/vsCode/final-assingment/images/thumbnails/fantastik-canavarlar1.jpg" title="childhood-s-end" alt="childhood-s-end" class="film-poster-img">
                                 </a>
                             </div> 
@@ -290,11 +309,11 @@
                                     <span class="fdi-item"></span>
                                 </div> 
                                 <h3 class="film-namex">
-                                    <a href="/vsCode/final-assingment/movies/child.html" title="childhood-s-end">Fantastik Canavarlar Nelerdir Nerede Bulunurlar</a>
+                                    <a href="/vsCode/final-assingment/movies/fantastikcan.html" title="fantastik-canavarlar">Fantastik Canavarlar Nelerdir Nerede Bulunurlar</a>
                                 </h3> 
                                 <p class="sc-desc">Alışılmadık magizoologist Newt Scamander güvenilir yıpranmış bavuluyla birlikte New York’a gelir. Scamender bu gezilerinde, Amerikan büyü topluluğunun Muggle’lardan korku içinde saklandıklarının farkına varır.</p> 
                                 <div class="fd-btn">
-                                    <a href="/vsCode/final-assingment/movies/child.html" class="btn btn-sm btn-play btn-secondary"><i class="fas fa-play mr-3"></i>Şimdi İzle</a> 
+                                    <a href="/vsCode/final-assingment/movies/fantastikcan.html" class="btn btn-sm btn-play btn-secondary"><i class="fas fa-play mr-3"></i>Şimdi İzle</a> 
                                 </div>
                             </div>
                         </div>
@@ -322,7 +341,7 @@
                     </div>
                 </div>
             </div>
-        <section class="movie-section">
+        <section class="movie-section col-9">
             <div class="movie-variety">
                 <div class="head">
                     <div class="left-head">
@@ -2601,34 +2620,34 @@
                 </div>
         </section>
     </main>
-            <footer class="footer">
+            <footer class="footer row col-12">
                 <div class="footer-links">
                     <ul>
                         <li>
-                            <a href="/vsCode/final-assingment/movies/lotr3.html">Android Uygulaması</a>
+                            <a href="https://play.google.com/store/games?hl=tr&gl=US">Android Uygulaması</a>
                         </li>
                         <li>
-                            <a href="/vsCode/final-assingment/movies/lotr3.html">Kullanım Koşulları</a>
+                            <a href="/vsCode/final-assingment/footer/sartlar.html">Kullanım Koşulları</a>
                         </li>
                         <li>
-                            <a href="/vsCode/final-assingment/movies/lotr3.html">İletişim</a>
+                            <a href="/vsCode/final-assingment/footer/iletisim.html">Başvuru İçin</a>
                         </li>
                         <li>
-                            <a href="/vsCode/final-assingment/movies/lotr3.html">Site Haritası</a>
+                            <a href="/vsCode/final-assingment/footer/sitemap.html">Site Haritası</a>
                         </li>
                     </ul>
                     <ul class="social">
                         <li>
-                            <a href=""><i class="fab fa-instagram"></i> İnstagram</a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> İnstagram</a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-facebook-square"></i> Facebook</a>
+                            <a href="https://tr-tr.facebook.com/"><i class="fab fa-facebook-square"></i> Facebook</a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-twitter-square"></i> Twitter</a>
+                            <a href="https://twitter.com/home"><i class="fab fa-twitter-square"></i> Twitter</a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-reddit-square"></i> Reddit</a>
+                            <a href="https://www.reddit.com/"><i class="fab fa-reddit-square"></i> Reddit</a>
                         </li>
                     </ul>
                 </div>

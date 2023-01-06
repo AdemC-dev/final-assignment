@@ -40,7 +40,7 @@ body
     justify-content: space-between;
     align-items: center;
     padding: 15px 100px;
-    z-index: 10;
+    z-index: 70;
 }
 header .logo{
     position: relative;
@@ -76,15 +76,18 @@ header .navigation a{
     font-size: 17px;
     text-align: center;
 }
-header .navigation a:hover, .dropbtn:hover{
+header .navigation a:hover, .dropbtn:hover, .log-nav a:hover, .log-nav a:nth-child(2)
+{
     color: #45f3ff;
     cursor: pointer;
 }
-header .user_log {
+header .user_log 
+{
     float: right;
     padding: 20px 30px;
 }
-header .logreg {
+header .logreg
+{
     background: #1e2029;
     color: #fff;
     padding: 5px 15px;
@@ -665,6 +668,56 @@ div
 {
     text-decoration: none;
 }
+#spfoot
+{
+    width: 100%;
+    height: 180px;
+    background-color: #000;
+    position:absolute;
+    top: 3900px;
+    left: 0;
+    text-align: center;
+}
+#spfoot2
+{
+    width: 100%;
+    height: 180px;
+    background-color: #000;
+    position:absolute;
+    top: 2000px;
+    left: 0;
+    text-align: center;
+}
+#spfoot3
+{
+    width: 100%;
+    height: 180px;
+    background-color: #000;
+    position:absolute;
+    top: 1400px;
+    left: 0;
+    text-align: center;
+}
+#spfoot4
+{
+    width: 100%;
+    height: 180px;
+    background-color: #000;
+    position:absolute;
+    top: 1600px;
+    left: 0;
+    text-align: center;
+}
+#spfoot5
+{
+    width: 100%;
+    height: 180px;
+    background-color: #000;
+    position:absolute;
+    top: 2080px;
+    left: 0;
+    text-align: center;
+}
 .footer
 {
     width: 100%;
@@ -1065,10 +1118,13 @@ strong, span
 }
 .login-screen
 {
-    position: relative;
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 40%;
     background-color: #1c1c1c;
     width: 460px;
-    height: 520px;
+    height: 430px;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -1083,6 +1139,7 @@ strong, span
     background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
     animation: clock 6s linear infinite;
     transform-origin: bottom right;
+    z-index: 50;
 }
 .login-screen::after
 {
@@ -1096,6 +1153,7 @@ strong, span
     animation: clock 6s linear infinite;
     transform-origin: bottom right;
     animation-delay: -3s;
+    z-index: 50;
 }
 @keyframes clock
 {
@@ -1112,7 +1170,7 @@ strong, span
     background-color: #28292d;
     inset: 2px;
     border-radius: 20px;
-    z-index: 10;
+    z-index: 60;
     padding: 50px 40px;
     display: flex;
     flex-direction: column;
@@ -1141,12 +1199,13 @@ strong, span
     color: #23242a;
     font-size: 1em;
     letter-spacing: 0.05em;
+    z-index: 20;
 }
 .inputx span
 {
     position: absolute;
     left: 0;
-    padding: 20px 10px 10px;
+    padding: 20px 0px 10px;
     font-size: 1em;
     color: #8f8f8f;
     pointer-events: none;
@@ -1157,5 +1216,498 @@ strong, span
 .inputx input:focus ~ span
 {
     color: #45f3ff;
-    transform: translateY(-34px);
+    transform: translateX(0px) translateY(-34px);
+    font-size: 12px;
+}
+.inputx i
+{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #45f3ff;
+    border-radius: 5px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 10;
+}
+.inputx input:valid ~ i,
+.inputx input:focus ~ i
+{
+    height: 44px;
+}
+.log-nav
+{
+    display: flex;
+    justify-content: space-between;
+}
+.log-nav a
+{
+    margin: 15px 0;
+    font-size: 12px;
+}
+input[type="submit"]
+{
+    border: none;
+    outline: none;
+    background-color: #45f3ff;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 22px;
+    font-weight: 550;
+}
+input[type="submit"]:active, #iptal:active
+{
+    opacity: .6;
+}
+.animate 
+{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}  
+@keyframes animatezoom 
+{
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+#iptal
+{
+    border: none;
+    outline: none;
+    background-color: #f00;
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px 22px;
+    font-weight: 550;
+    position: absolute;
+    bottom: 12%;
+    right: 7%;
+}
+@media screen and (max-width: 600px) {
+    .header {
+        width: 1650px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation {
+        position: absolute;
+        top: 0;
+    }
+    .search {
+        position: absolute;
+        top: 60%;
+        left: 25%;
+        width: 400px;
+        margin: 0;
+        padding: 0;
+    }
+    .logo {
+        margin-left: 90px;
+    }
+    .user_log {
+        position: absolute;
+        top: 30%;
+        right: 2%;
+        
+    }
+}
+@media screen and (max-width: 400px) {
+    .header {
+        width: 1400px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation {
+        position: absolute;
+        top: 0;
+    }
+    .search {
+        position: absolute;
+        top: 60%;
+        left: 25%;
+        width: 400px;
+        margin: 0;
+        padding: 0;
+    }
+    .logo {
+        margin-left: 90px;
+    }
+    .user_log {
+        position: absolute;
+        top: 55%;
+        right: 5%;
+        
+    }
+}
+@media screen and (max-width: 300px) {
+    .header {
+        width: 1100px;
+        height: 200px;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation {
+        position: absolute;
+        top: 0;
+    }
+    .search {
+        position: absolute;
+        top: 65%;
+        left: 5%;
+        width: 400px;
+        margin: 0;
+        padding: 0;
+    }
+    .logo {
+        margin-left: 90px;
+        margin-bottom: 50px;
+    }
+    .user_log {
+        position: absolute;
+        top: 55%;
+        right: 5%;
+        
+    }
+}
+@media screen and (max-width: 200px) {
+    .header {
+        width: 700px;
+        height: 270px;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation {
+        position: absolute;
+        top: 0;
+    }
+    .search {
+        position: absolute;
+        top: 65%;
+        left: 5%;
+        width: 150px;
+        margin: 0;
+        padding: 0;
+    }
+    .logo {
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+    .user_log {
+        position: absolute;
+        top: 73%;
+        right: 5%;
+    }
+}
+.article
+{   
+    width: 100%;
+    background-color: #070D2B;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+.article p
+{
+    background-color: #11718f;
+    width: 1000px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.article h3
+{
+    background-color: #45f3ff;
+    width: 1000px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.box
+{
+    position: absolute;
+    width: 1000px;
+    height: 1860px;
+    top: 20%;
+    left: 22%;
+    display: flex;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 1000px;
+    height: 1860px;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: kenaranim 22s linear infinite;
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 1000px;
+    height: 1860px;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: kenaranim 22s linear infinite;
+    animation-delay: 11s;
+}
+@keyframes kenaranim 
+{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.box .form
+{
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    z-index: 10;
+}
+table, td
+{
+    border: 1px solid aqua;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th
+{
+    display: table-cell;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.box .form h2
+{
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+.box .form .inputbox .heading
+{
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.box .form .inputbox
+{
+    margin: 20px;
+}
+.box .form .inputbox label
+{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.box .form .inputbox span
+{
+    cursor: default;
+}
+.box .form .inputbox input
+{
+    margin: 5px;
+    margin-left: 10px;
+    top: 0;
+    left: 0;
+    height: 30px;
+    outline: none;
+    border-radius: 2px;
+    background: transparent;
+    width: 600px;
+    color: #45f3ff;
+    font-size: 18px;
+    border: none;
+}
+.box .form .inputbox textarea
+{
+    margin: 5px;
+    margin-left: 10px;
+    top: 0;
+    left: 0;
+    height: 30px;
+    outline: none;
+    border-radius: 1px;
+    background: transparent;
+    width: 600px;
+    color: #45f3ff;
+    font-size: 18px
+}
+.box .form .inputbox .radio1
+{
+    width: 21px;
+}
+.box .form .inputbox .radio2
+{
+    position: relative;
+    bottom: 9px;
+    right: 20px;
+    left: 2px;
+}
+.box .form .inputbox .radiox
+{
+    position: relative;
+    bottom: 9px;
+    right: 20px;
+    left: 2px;
+}
+#adres
+{
+    height: 100px;
+}
+#ref
+{
+    height: 100px;
+}
+.box .form .inputbox input:invalid
+{
+    outline: 2px solid red;
+}
+.box .form .inputbox select
+{
+    margin: 5px;
+    margin-left: 10px;
+    top: 0;
+    left: 0;
+    height: 30px;
+    outline: none;
+    border-radius: 1px;
+    background: transparent;
+    width: 250px;
+    text-align: center;
+    color: #45f3ff;
+    font-size: 18px
+}
+.box .form .inputbox option
+{
+    background: #1c1c1c;
+}
+.box .form .inputbox .diller
+{   
+    display: table-cell;
+}
+.box .form .inputbox td.subm
+{
+    text-align: center;
+}
+.box .form .inputbox input.subm
+{
+    border-color: #45f3ff;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.box .form .inputbox input.subm:hover
+{
+    transform: scale(1.2);
+}
+.swal-modal
+{
+    background-color: #28292d;
+}
+.swal-title
+{
+    color: #45f3ff;
+}
+.swal-text
+{
+    color: #45f3ff;
+}
+.swal-button
+{
+    background-color: #1c1c1c;
+    border: 1px solid white;
+}
+.swal-button--cancel
+{
+    background-color: #1c1c1c;
+    color: #fff;
+    border: 1px solid white;
+}
+#birth
+{
+    cursor: pointer;
+}
+#point
+{
+    cursor: pointer;
+}
+#vol
+{
+    width: 400px;
+    visibility: hidden;
+}
+#vol2
+{
+    width: 400px;
+    visibility: hidden;
+}#vol3
+{
+    width: 400px;
+    visibility: hidden;
+}#vol4
+{
+    width: 400px;
+    visibility: hidden;
+}#vol5
+{
+    width: 400px;
+    visibility: hidden;
+}
+#rank
+{
+    width: 40px;
+    position: absolute;
+    top: 1247px;
+    left: 905px;
+    visibility: visible;
+}
+#rank2
+{
+    width: 40px;
+    position: absolute;
+    top: 1290px;
+    left: 905px;
+    visibility: visible;
+}
+#rank3
+{
+    width: 40px;
+    position: absolute;
+    top: 1332px;
+    left: 905px;
+    visibility: visible;
+}
+#rank4
+{
+    width: 40px;
+    position: absolute;
+    top: 1375px;
+    left: 905px;
+    visibility: visible;
+}
+#rank5
+{
+    width: 40px;
+    position: absolute;
+    top: 1416px;
+    left: 905px;
+    visibility: visible;
 }
