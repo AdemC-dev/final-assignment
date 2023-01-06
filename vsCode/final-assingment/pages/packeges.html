@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr_TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinema ve Film</title>
+    <link rel="stylesheet" type="text/css" href="/vsCode/final-assingment/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div id="header-scroll">
+            <header class="header">
+                <div class="logo">
+                    <a href="/vsCode/final-assingment/index.html"><img src="/vsCode/final-assingment/images/logo.png" alt="logo"></a>
+                </div>
+                <nav class="navigation">
+                    <fieldset class="fields">
+                    <a href="/vsCode/final-assingment/index.html">Anasayfa</a>
+                    </fieldset>
+                    <div class="dropdown">
+                        <fieldset class="fields">
+                            <button class="dropbtn">Filmler
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </fieldset>
+                        <div class="dropdown-content" id="f">
+                            <div class="drpleft" id="fx">
+                                <a href="/vsCode/final-assingment/türler/aile.html" class="drpa">Aile</a>
+                                <a href="/vsCode/final-assingment/türler/aksiyon.html" class="drpa">Aksiyon</a>
+                                <a href="/vsCode/final-assingment/türler/animasyon.html" class="drpa">Animasyon</a>
+                                <a href="/vsCode/final-assingment/türler/bilimkurgu.html" class="drpa">Bilim Kurgu</a>
+                                <a href="/vsCode/final-assingment/türler/dram.html" class="drpa">Dram</a>
+                                <a href="/vsCode/final-assingment/türler/fantastik.html" class="drpa">Fantastik</a>
+                                <a href="/vsCode/final-assingment/türler/gerilim.html" class="drpa">Gerilim</a>
+                                <a href="/vsCode/final-assingment/türler/gizem.html" class="drpa">Gizem</a>
+                                <a href="/vsCode/final-assingment/türler/komedi.html" class="drpa">Komedi</a>
+                                <a href="/vsCode/final-assingment/türler/korku.html" class="drpa">Korku</a>
+                            </div>
+                            <div class="drpright" id="fx">
+                                <a href="/vsCode/final-assingment/türler/macera.html" class="drpa">Macera</a>
+                                <a href="/vsCode/final-assingment/türler/müzikal.html" class="drpa">Müzikal</a>
+                                <a href="/vsCode/final-assingment/türler/polisiye.html" class="drpa">Polisiye</a>
+                                <a href="/vsCode/final-assingment/türler/belgesel.html" class="drpa">Belgesel</a>
+                                <a href="/vsCode/final-assingment/türler/romantik.html" class="drpa">Romantik</a>
+                                <a href="/vsCode/final-assingment/türler/savas.html" class="drpa">Savaş</a>
+                                <a href="/vsCode/final-assingment/türler/spor.html" class="drpa">Spor</a>
+                                <a href="/vsCode/final-assingment/türler/suc.html" class="drpa">Suç</a>
+                                <a href="/vsCode/final-assingment/türler/tarihi.html" class="drpa">Tarihi</a>
+                                <a href="/vsCode/final-assingment/türler/western.html" class="drpa">Western</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <fieldset class="fields">
+                            <button class="dropbtn">Diziler
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </fieldset>
+                        <div class="dropdown-content" id="d">
+                            <div class="drpleft" id="dx">
+                                <a href="/vsCode/final-assingment/diziler/aile.html" class="drpa">Aile</a>
+                                <a href="/vsCode/final-assingment/diziler/aksiyon.html" class="drpa">Aksiyon</a>
+                                <a href="/vsCode/final-assingment/diziler/animasyon.html" class="drpa">Animasyon</a>
+                                <a href="/vsCode/final-assingment/diziler/bilimkurgu.html" class="drpa">Bilim Kurgu</a>
+                                <a href="/vsCode/final-assingment/diziler/dram.html" class="drpa">Dram</a>
+                                <a href="/vsCode/final-assingment/diziler/fantastik.html" class="drpa">Fantastik</a>
+                                <a href="/vsCode/final-assingment/diziler/gerilim.html" class="drpa">Gerilim</a>
+                                <a href="/vsCode/final-assingment/diziler/gizem.html" class="drpa">Gizem</a>
+                                <a href="/vsCode/final-assingment/diziler/komedi.html" class="drpa">Komedi</a>
+                                <a href="/vsCode/final-assingment/diziler/korku.html" class="drpa">Korku</a>
+                            </div>
+                            <div class="drpright" id="dx">
+                                <a href="/vsCode/final-assingment/diziler/macera.html" class="drpa">Macera</a>
+                                <a href="/vsCode/final-assingment/diziler/müzikal.html" class="drpa">Müzikal</a>
+                                <a href="/vsCode/final-assingment/diziler/polisiye.html" class="drpa">Polisiye</a>
+                                <a href="/vsCode/final-assingment/diziler/belgesel.html" class="drpa">Belgesel</a>
+                                <a href="/vsCode/final-assingment/diziler/romantik.html" class="drpa">Romantik</a>
+                                <a href="/vsCode/final-assingment/diziler/savas.html" class="drpa">Savaş</a>
+                                <a href="/vsCode/final-assingment/diziler/spor.html" class="drpa">Spor</a>
+                                <a href="/vsCode/final-assingment/diziler/suc.html" class="drpa">Suç</a>
+                                <a href="/vsCode/final-assingment/diziler/tarihi.html" class="drpa">Tarihi</a>
+                                <a href="/vsCode/final-assingment/diziler/western.html" class="drpa">Western</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <fieldset class="fields">
+                            <button class="dropbtn">Yapım Yılı
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </fieldset>
+                        <div class="dropdown-content" id="y">
+                            <div class="drpleft" id="yx">
+                                <a href="/vsCode/final-assingment/yapımy/2000.html" class="drpa">2000</a>
+                                <a href="/vsCode/final-assingment/yapımy/2001.html" class="drpa">2001</a>
+                                <a href="/vsCode/final-assingment/yapımy/2002.html" class="drpa">2002</a>
+                                <a href="/vsCode/final-assingment/yapımy/2003.html" class="drpa">2003</a>
+                                <a href="/vsCode/final-assingment/yapımy/2004.html" class="drpa">2004</a>
+                                <a href="/vsCode/final-assingment/yapımy/2005.html" class="drpa">2005</a>
+                                <a href="/vsCode/final-assingment/yapımy/2006.html" class="drpa">2006</a>
+                                <a href="/vsCode/final-assingment/yapımy/2007.html" class="drpa">2007</a>
+                                <a href="/vsCode/final-assingment/yapımy/2008.html" class="drpa">2008</a>
+                                <a href="/vsCode/final-assingment/yapımy/2009.html" class="drpa">2009</a>
+                            </div>
+                            <div class="drpright" id="yx">
+                                <a href="/vsCode/final-assingment/yapımy/2010.html" class="drpa">2010</a>
+                                <a href="/vsCode/final-assingment/yapımy/2011.html" class="drpa">2011</a>
+                                <a href="/vsCode/final-assingment/yapımy/2012.html" class="drpa">2012</a>
+                                <a href="/vsCode/final-assingment/yapımy/2013.html" class="drpa">2013</a>
+                                <a href="/vsCode/final-assingment/yapımy/2014.html" class="drpa">2014</a>
+                                <a href="/vsCode/final-assingment/yapımy/2015.html" class="drpa">2015</a>
+                                <a href="/vsCode/final-assingment/yapımy/2016.html" class="drpa">2016</a>
+                                <a href="/vsCode/final-assingment/yapımy/2017.html" class="drpa">2017</a>
+                                <a href="/vsCode/final-assingment/yapımy/2018.html" class="drpa">2018</a>
+                                <a href="/vsCode/final-assingment/yapımy/2019.html" class="drpa">2019</a>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="fields">
+                    <a href="/vsCode/final-assingment/pages/packeges.html">Film Koleksiyonları</a>
+                    </fieldset>
+                    <fieldset class="fields">
+                    <a href="/vsCode/final-assingment/pages/goats.html">En iyiler</a>
+                    </fieldset>
+                </nav>
+                <div class="user_log">
+                    <a href=""><button class="logreg">GİRİŞ YAP</button></a>
+                    <a href=""><button class="logreg">KAYIT OL</button></a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Dizi ve Film Ara...">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </header>
+        </div>
+            <main>
+                <div class="boxc">
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/starwars.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/starwarssaga.png" alt="">
+                            <h1 class="h1" id="t1">Star Wars</h1>
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/marvel.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/marvelsaga.jpeg" alt="">
+                            <h1 class="h1" id="t2">Marvel</h1>
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/lotr.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/lotrsaga.jpg" alt="">
+                            <h1 class="h1" id="t3">Yüzüklerin Efendisi</h1>
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/harrypotter.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/harrypottersaga.jpg" alt="">
+                            <h1 class="h1" id="t4">Harry Potter</h1>
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/matrix.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/matrixsaga.png" alt="">
+                            <h1 class="h1" id="t5">Matrix</h1>
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/jurassicpark.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/jurassicparksaga3.jpg" alt="">
+                            <h1 class="h1" id="t6">Jurassic Park</h1>
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/terminatör.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/terminatörsaga2.jpg" alt="" id="term">
+                            <h1 class="h1" id="t7">Terminatör</h1>
+                        </a>
+                    </div>
+                    <div class="collection">
+                        <a href="/vsCode/final-assingment/collections/misimp.html">
+                            <img src="/vsCode/final-assingment/images/thumbnails/misaga3.jpg" alt="">
+                            <h1 class="h1" id="t8">Görevimiz Tehlike</h1>
+                        </a>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer" id="spfoot2">
+                <div class="footer-links">
+                    <ul>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">Android Uygulaması</a>
+                        </li>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">Kullanım Koşulları</a>
+                        </li>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">İletişim</a>
+                        </li>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">Site Haritası</a>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li>
+                            <a href=""><i class="fab fa-instagram"></i> İnstagram</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-facebook-square"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-twitter-square"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-reddit-square"></i> Reddit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-about">
+                    <div class="about-text">
+                       estelelenathmovies.com reklamsız ve ücretsiz bir film akış sitesidir. Biz size 10000 üzerin de film ve diziyi herhangi bir ücret ödemeden ya da hesap oluşturmadan online izleme imkanı sunuyoruz. Ayrıca isterseniz daha sonra izlemek için filmleri MoviesCloud'dan indirebilirsizin.
+                    </div>
+                    <p class="copyright">@estelelenathmovies.com</p>
+                </div>
+            </footer>
+    </div>
+</body>
+</html>

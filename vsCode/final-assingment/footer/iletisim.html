@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="tr_TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinema ve Film</title>
+    <link rel="stylesheet" type="text/css" href="/vsCode/final-assingment/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div id="header-scroll">
+            <header class="header">
+                <div class="logo">
+                    <a href="/vsCode/final-assingment/index.html"><img src="/vsCode/final-assingment/images/logo.png" alt="logo"></a>
+                </div>
+                <nav class="navigation">
+                    <fieldset class="fields">
+                    <a href="/vsCode/final-assingment/index.html">Anasayfa</a>
+                    </fieldset>
+                    <div class="dropdown">
+                        <fieldset class="fields">
+                            <button class="dropbtn">Filmler
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </fieldset>
+                        <div class="dropdown-content" id="f">
+                            <div class="drpleft" id="fx">
+                                <a href="/vsCode/final-assingment/türler/aile.html" class="drpa">Aile</a>
+                                <a href="/vsCode/final-assingment/türler/aksiyon.html" class="drpa">Aksiyon</a>
+                                <a href="/vsCode/final-assingment/türler/animasyon.html" class="drpa">Animasyon</a>
+                                <a href="/vsCode/final-assingment/türler/bilimkurgu.html" class="drpa">Bilim Kurgu</a>
+                                <a href="/vsCode/final-assingment/türler/dram.html" class="drpa">Dram</a>
+                                <a href="/vsCode/final-assingment/türler/fantastik.html" class="drpa">Fantastik</a>
+                                <a href="/vsCode/final-assingment/türler/gerilim.html" class="drpa">Gerilim</a>
+                                <a href="/vsCode/final-assingment/türler/gizem.html" class="drpa">Gizem</a>
+                                <a href="/vsCode/final-assingment/türler/komedi.html" class="drpa">Komedi</a>
+                                <a href="/vsCode/final-assingment/türler/korku.html" class="drpa">Korku</a>
+                            </div>
+                            <div class="drpright" id="fx">
+                                <a href="/vsCode/final-assingment/türler/macera.html" class="drpa">Macera</a>
+                                <a href="/vsCode/final-assingment/türler/müzikal.html" class="drpa">Müzikal</a>
+                                <a href="/vsCode/final-assingment/türler/polisiye.html" class="drpa">Polisiye</a>
+                                <a href="/vsCode/final-assingment/türler/belgesel.html" class="drpa">Belgesel</a>
+                                <a href="/vsCode/final-assingment/türler/romantik.html" class="drpa">Romantik</a>
+                                <a href="/vsCode/final-assingment/türler/savas.html" class="drpa">Savaş</a>
+                                <a href="/vsCode/final-assingment/türler/spor.html" class="drpa">Spor</a>
+                                <a href="/vsCode/final-assingment/türler/suc.html" class="drpa">Suç</a>
+                                <a href="/vsCode/final-assingment/türler/tarihi.html" class="drpa">Tarihi</a>
+                                <a href="/vsCode/final-assingment/türler/western.html" class="drpa">Western</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <fieldset class="fields">
+                            <button class="dropbtn">Diziler
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </fieldset>
+                        <div class="dropdown-content" id="d">
+                            <div class="drpleft" id="dx">
+                                <a href="/vsCode/final-assingment/diziler/aile.html" class="drpa">Aile</a>
+                                <a href="/vsCode/final-assingment/diziler/aksiyon.html" class="drpa">Aksiyon</a>
+                                <a href="/vsCode/final-assingment/diziler/animasyon.html" class="drpa">Animasyon</a>
+                                <a href="/vsCode/final-assingment/diziler/bilimkurgu.html" class="drpa">Bilim Kurgu</a>
+                                <a href="/vsCode/final-assingment/diziler/dram.html" class="drpa">Dram</a>
+                                <a href="/vsCode/final-assingment/diziler/fantastik.html" class="drpa">Fantastik</a>
+                                <a href="/vsCode/final-assingment/diziler/gerilim.html" class="drpa">Gerilim</a>
+                                <a href="/vsCode/final-assingment/diziler/gizem.html" class="drpa">Gizem</a>
+                                <a href="/vsCode/final-assingment/diziler/komedi.html" class="drpa">Komedi</a>
+                                <a href="/vsCode/final-assingment/diziler/korku.html" class="drpa">Korku</a>
+                            </div>
+                            <div class="drpright" id="dx">
+                                <a href="/vsCode/final-assingment/diziler/macera.html" class="drpa">Macera</a>
+                                <a href="/vsCode/final-assingment/diziler/müzikal.html" class="drpa">Müzikal</a>
+                                <a href="/vsCode/final-assingment/diziler/polisiye.html" class="drpa">Polisiye</a>
+                                <a href="/vsCode/final-assingment/diziler/belgesel.html" class="drpa">Belgesel</a>
+                                <a href="/vsCode/final-assingment/diziler/romantik.html" class="drpa">Romantik</a>
+                                <a href="/vsCode/final-assingment/diziler/savas.html" class="drpa">Savaş</a>
+                                <a href="/vsCode/final-assingment/diziler/spor.html" class="drpa">Spor</a>
+                                <a href="/vsCode/final-assingment/diziler/suc.html" class="drpa">Suç</a>
+                                <a href="/vsCode/final-assingment/diziler/tarihi.html" class="drpa">Tarihi</a>
+                                <a href="/vsCode/final-assingment/diziler/western.html" class="drpa">Western</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <fieldset class="fields">
+                            <button class="dropbtn">Yapım Yılı
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </fieldset>
+                        <div class="dropdown-content" id="y">
+                            <div class="drpleft" id="yx">
+                                <a href="/vsCode/final-assingment/yapımy/2000.html" class="drpa">2000</a>
+                                <a href="/vsCode/final-assingment/yapımy/2001.html" class="drpa">2001</a>
+                                <a href="/vsCode/final-assingment/yapımy/2002.html" class="drpa">2002</a>
+                                <a href="/vsCode/final-assingment/yapımy/2003.html" class="drpa">2003</a>
+                                <a href="/vsCode/final-assingment/yapımy/2004.html" class="drpa">2004</a>
+                                <a href="/vsCode/final-assingment/yapımy/2005.html" class="drpa">2005</a>
+                                <a href="/vsCode/final-assingment/yapımy/2006.html" class="drpa">2006</a>
+                                <a href="/vsCode/final-assingment/yapımy/2007.html" class="drpa">2007</a>
+                                <a href="/vsCode/final-assingment/yapımy/2008.html" class="drpa">2008</a>
+                                <a href="/vsCode/final-assingment/yapımy/2009.html" class="drpa">2009</a>
+                            </div>
+                            <div class="drpright" id="yx">
+                                <a href="/vsCode/final-assingment/yapımy/2010.html" class="drpa">2010</a>
+                                <a href="/vsCode/final-assingment/yapımy/2011.html" class="drpa">2011</a>
+                                <a href="/vsCode/final-assingment/yapımy/2012.html" class="drpa">2012</a>
+                                <a href="/vsCode/final-assingment/yapımy/2013.html" class="drpa">2013</a>
+                                <a href="/vsCode/final-assingment/yapımy/2014.html" class="drpa">2014</a>
+                                <a href="/vsCode/final-assingment/yapımy/2015.html" class="drpa">2015</a>
+                                <a href="/vsCode/final-assingment/yapımy/2016.html" class="drpa">2016</a>
+                                <a href="/vsCode/final-assingment/yapımy/2017.html" class="drpa">2017</a>
+                                <a href="/vsCode/final-assingment/yapımy/2018.html" class="drpa">2018</a>
+                                <a href="/vsCode/final-assingment/yapımy/2019.html" class="drpa">2019</a>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="fields">
+                    <a href="/vsCode/final-assingment/pages/packeges.html">Film Koleksiyonları</a>
+                    </fieldset>
+                    <fieldset class="fields">
+                    <a href="/vsCode/final-assingment/pages/goats.html">En iyiler</a>
+                    </fieldset>
+                </nav>
+                <div class="user_log">
+                    <a href=""><button class="logreg">GİRİŞ YAP</button></a>
+                    <a href=""><button class="logreg">KAYIT OL</button></a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Dizi ve Film Ara...">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </header>
+        </div>
+            <main>
+                <div class="box">
+                    <div class="form">
+                        <h2>İş Başvuru Formu</h2>
+                        <div class="inputbox">
+                            <script src="sweetalert.min.js"></script>
+                            <form method="POST" action="#" onsubmit="return submitform(this);">
+                                <table>
+                                    <tr>
+                                        <th colspan="2"><span class="heading">Genel Bilgiler</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="ad">Ad</label>
+                                        </td>
+                                        <td colspan="2">
+                                            <input type="text" name="ad" id="ad" autofocus placeholder="Adınız..." pattern="^([\p{L}])$*"></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="soyad">Soyad</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="soyad" id="soyad" placeholder="Soyadınız..." pattern="^([\p{L}])$*"></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="tc">T.C. Kimlik No</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" pattern="[\p{N}]{11}" name="tc" id="tc" placeholder="TC Kimlik Numaranız..." title="11 haneli T.C. kimlik numaranız"></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="birth">Doğum Tarihi</label>
+                                        </td>
+                                        <td>
+                                            <input type="date" name="birth" id="birth" min="1900-01-02" max="2004-10-31"></br>
+                                        </td>
+                                    </tr>
+                                    <!--^([\p{L}\p{N}]{2,})\s+([\p{L}\p{N}]+)$-->
+                                    <!--^([\p{L}])$-->
+                                    <!--^([\p{N}])$-->
+                                    <tr>
+                                        <td>
+                                            <label for="birtplace">Doğum Yeri</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="birtplace" id="birtplace" pattern="^([\p{L}])$*" placeholder="Doğum Yeriniz..."></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Cinsiyet</span>
+                                        </td>
+                                        <td>
+                                            <input class="radio1" type="radio" name="cins" id="erkek" value="Erkek">
+                                            <label class="radio2" for="erkek">Erkek</label>
+                                            <input class="radio1" type="radio" name="cins" id="kadın" value="Kadın">
+                                            <label class="radio2" for="kadın">Kadın</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2"><span class="heading">İletişim Bilgileri</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="email">E-posta</label>
+                                        </td>
+                                        <td>
+                                            <input type="email" name="email" id="email" placeholder="E-posta adresiniz..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="telno">Telefon Numarası</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="telno" id="telno" pattern="^([\p{N}]){10}$" placeholder="Telefon Numaranız..."></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="telno">Yakının Telefon Numarası</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="telno" id="telno" pattern="^([\p{N}]){10}$" placeholder="Bir Yakınınızın Telefon Numaranız..."></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="adres">Adres</label>
+                                        </td>
+                                        <td>
+                                            <textarea name="adres" id="adres" cols="92" rows="6" placeholder="İl/İlçe/Mahalle/Sokak adı/Sokak no/Bina no/Daire olarak adresinizi giriniz..."></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2"><span class="heading">Diğer Bilgiler</span></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="isp">Başvurulan Pozisyon</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="isp" id="isp" pattern="^([\p{L}\p{N}]$*" placeholder="Başvurmak istediğiniz pozisyonun adı..."></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Ehliyet</span>
+                                        </td>
+                                        <td>
+                                            <input class="radio1" type="checkbox" name="dil" id="a" value="A">
+                                            <label class="radio2" for="a">A</label>
+                                            <input class="radio1" type="checkbox" name="dil" id="b" value="B">
+                                            <label class="radio2" for="b">B</label>
+                                            <input class="radio1" type="checkbox" name="dil" id="c" value="C">
+                                            <label class="radio2" for="f">C</label>
+                                            <input class="radio1" type="checkbox" name="dil" id="g" value="G">
+                                            <label class="radio2" for="g">D</label>
+                                            <input class="radio1" type="checkbox" name="dil" id="yok" value="Yok">
+                                            <label class="radio2" for="yok">Yok</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Öğrenim Durumu</span>
+                                        </td>
+                                        <td>
+                                            <select id="point" name="ögrenim">
+                                                <option value="ilk">İlköğretim</option>
+                                                <option value="orta">Ortaöğretim</option>
+                                                <option value="lise">Lise</option>
+                                                <option value="önl">Önlisans</option>
+                                                <option value="lis">Lisans</option>
+                                                <option value="dok">Doktora</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Askerlik Durumu</span>
+                                        </td>
+                                        <td>
+                                            <select id="point" name="askerlik">
+                                                <option value="tam">Tamamlandı</option>
+                                                <option value="tec">Tecilli</option>
+                                                <option value="muaf">Muaf</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Medeni Hali</span>
+                                        </td>
+                                        <td>
+                                            <input class="radio1" type="radio" name="medeni" id="evli" value="Evli">
+                                            <label class="radio2" for="evli">Evli</label>
+                                            <input class="radio1" type="radio" name="medeni" id="bekar" value="Bekar">
+                                            <label class="radio2" for="bekar">Bekar</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Yabancı Diller</span>
+                                        </td>
+                                        <td class="diller">
+                                            <input class="radio1" type="checkbox" name="dil" id="ing" value="İng" onclick="reveal()">
+                                            <label class="radiox" for="ing" >İngilizce</label>
+                                            <input type="range" name="vol" id="vol" min="0" step="20" max="100" oninput="this.nextElementSibling.value = this.value">
+                                            <output id="rank"></output>
+                                            <br>
+                                            <input class="radio1" type="checkbox" name="dil" id="alm" value="Alm" onclick="reveal2()">
+                                            <label class="radiox" for="alm">Almanca</label>
+                                            <input type="range" name="vol2" id="vol2" min="0" step="20" max="100" oninput="this.nextElementSibling.value = this.value">
+                                            <output id="rank2"></output>
+                                            <br>
+                                            <input class="radio1" type="checkbox" name="dil" id="rus" value="Rus" onclick="reveal3()">
+                                            <label class="radiox" for="rus">Rusça</label>
+                                            <input type="range" name="vol3" id="vol3" min="0" step="20" max="100" oninput="this.nextElementSibling.value = this.value">
+                                            <output id="rank3"></output>
+                                            <br>
+                                            <input class="radio1" type="checkbox" name="dil" id="cin" value="Cin" onclick="reveal4()">
+                                            <label class="radiox" for="cin">Çince</label>
+                                            <input type="range" name="vol4" id="vol4" min="0" step="20" max="100" oninput="this.nextElementSibling.value = this.value">
+                                            <output id="rank4"></output>
+                                            <br>
+                                            <input class="radio1" type="checkbox" name="dil" id="jap" value="Jap" onclick="reveal5()">
+                                            <label class="radiox" for="jap">Japonca</label>
+                                            <input type="range" name="vol5" id="vol5" min="0" step="20" max="100" oninput="this.nextElementSibling.value = this.value">
+                                            <output id="rank5"></output>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>Özgeçmiş(Word)</span>
+                                        </td>
+                                        <td>
+                                            <input type="file" name="point" id="point" accept=".doc"></br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="ref">Referanslar</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="ref" id="ref" pattern="^([\p{L}\p{N}]{2,})\s+([\p{L}\p{N}]+)$*" placeholder="Ad Soyad/Ad Soyad...">
+                                            <input type="text" pattern="^([\p{N}])$*" name="ref" id="ref" placeholder="Telefon numarası/Telefon numarası...">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subm" colspan="2">
+                                            <input class="subm" type="submit" value="Gönder">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                            <script class="alert">
+                                function submitform(form) {
+                                    swal({
+                                        title:"Emin misiniz?",
+                                        text:"Bu Form Gönderilecektir",
+                                        icon:"warning",
+                                        buttons:true,
+                                        dangermode:true,
+                                    })
+                                    .then((isOkay) => {
+                                        if (isOkay) {
+                                            form.submit();
+                                        }
+                                    });
+                                    return false;
+                                }
+                            </script>
+                            <script>
+                                function reveal() {
+                                    var x = document.getElementById("vol");
+                                    if (x.style.visibility === 'visible') {
+                                        x.style.visibility = 'hidden';
+                                    }   else {
+                                        x.style.visibility = 'visible';
+                                    }
+                                }
+                                function reveal2() {
+                                    var x = document.getElementById("vol2");
+                                    if (x.style.visibility === 'visible') {
+                                        x.style.visibility = 'hidden';
+                                    }   else {
+                                        x.style.visibility = 'visible';
+                                    }
+                                }
+                                function reveal3() {
+                                    var x = document.getElementById("vol3");
+                                    if (x.style.visibility === 'visible') {
+                                        x.style.visibility = 'hidden';
+                                    }   else {
+                                        x.style.visibility = 'visible';
+                                    }
+                                }
+                                function reveal4() {
+                                    var x = document.getElementById("vol4");
+                                    if (x.style.visibility === 'visible') {
+                                        x.style.visibility = 'hidden';
+                                    }   else {
+                                        x.style.visibility = 'visible';
+                                    }
+                                }
+                                function reveal5() {
+                                    var x = document.getElementById("vol5");
+                                    if (x.style.visibility === 'visible') {
+                                        x.style.visibility = 'hidden';
+                                    }   else {
+                                        x.style.visibility = 'visible';
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer" id="spfoot5">
+                <div class="footer-links">
+                    <ul>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">Android Uygulaması</a>
+                        </li>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">Kullanım Koşulları</a>
+                        </li>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">İletişim</a>
+                        </li>
+                        <li>
+                            <a href="/vsCode/final-assingment/movies/lotr3.html">Site Haritası</a>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li>
+                            <a href=""><i class="fab fa-instagram"></i> İnstagram</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-facebook-square"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-twitter-square"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fab fa-reddit-square"></i> Reddit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-about">
+                    <div class="about-text">
+                       estelelenathmovies.com reklamsız ve ücretsiz bir film akış sitesidir. Biz size 10000 üzerin de film ve diziyi herhangi bir ücret ödemeden ya da hesap oluşturmadan online izleme imkanı sunuyoruz. Ayrıca isterseniz daha sonra izlemek için filmleri MoviesCloud'dan indirebilirsizin.
+                    </div>
+                    <p class="copyright">@estelelenathmovies.com</p>
+                </div>
+            </footer>
+    </div>
+</body>
+</html>
