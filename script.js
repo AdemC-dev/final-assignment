@@ -1,108 +1,22 @@
-//Slider
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-}
-
-//Scroll Sticky
-window.onscroll = function () { myFunction() };
+/*DEPRECATED
+//SCROLL STICKY
+window.onscroll = () => {
+    scrollSticky()
+};
 
 let navbar = document.getElementById("header-scroll");
 let sticky = navbar.offsetTop;
 
-function myFunction() {
+function scrollSticky() {
     if (window.scrollY >= 0) {
         navbar.classList.add("sticky")
     } else {
         navbar.classList.remove("sticky");
     }
 }
+*/
 
-//Search Bar TypeWriter
-document.addEventListener('DOMContentLoaded', function() {
-    var textSpan = document.getElementById('typeWriter');
-    var text = textSpan.getAttribute('data-words').split(',');
-    var delay = parseInt(textSpan.getAttribute('data-delay'));
-    var deleteDelay = parseInt(textSpan.getAttribute('data-deletedelay'));
-    let colors = textSpan.getAttribute("data-colors").split(",");
-    var wordIndex = 0;
-    let colorIndex = 0;
-    var isDeleting = false;
-
-    let cursorSpan = document.querySelector(".cursor");;
-    //let cursorDisplay = cursorSpan.dataset.cursorDisplay;
-
-    function positionCursor() {
-        /*
-        let textValue = textSpan.textContent;
-        let lastChar = textValue.charAt(textValue.length - 1);
-        let lastCharWidth = getTextWidth(lastChar);
-        cursorSpan.style.left = (textSpan.getBoundingClientRect().left + lastCharWidth + "px");
-        */
-        let spanWidth = textSpan.getBoundingClientRect().width;
-        let getBound = textSpan.getBoundingClientRect();
-        
-        cursorSpan.style.left = (getBound.left + spanWidth - 668) + 'px';
-    }
-
-    /*
-    function getTextWidth(text) {
-        let span = document.createElement('span');
-        span.style.visibility = 'hidden';
-        span.style.whiteSpace = 'nowrap';
-        span.style.fontSize = getComputedStyle(textSpan).fontSize;
-        span.textContent = text;
-        document.body.appendChild(span);
-        let width = span.getBoundingClientRect().width;
-        document.body.removeChild(span);
-        return width;
-    }
-    */
-
-    function type() {
-        var currentText = text[wordIndex];
-        let currentColor = colors[colorIndex];
-        textSpan.style.color = currentColor;
-
-        let alter = isDeleting ? textSpan.textContent.length - 1 : textSpan.textContent.length + 1;
-        let typedText = currentText.substring(0, alter);
-        textSpan.textContent = typedText;
-
-        positionCursor();
-
-        if (!isDeleting && textSpan.textContent === currentText) {
-            isDeleting = true;
-            setTimeout(type, deleteDelay);
-        }
-        else if (isDeleting && textSpan.textContent === '') {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % text.length;
-            colorIndex = (colorIndex + 1) % colors.length;
-            setTimeout(type, 750);
-        }
-        else {
-            setTimeout(type, delay);
-        }
-    }
-
-    setTimeout(type, delay);
-});
-
-
-//Login&Register Screen
+//lOGIN & REGISTER SCREEN
 const loginScreen = document.getElementById("login");
 const regScreen = document.getElementById("register");
 const logContent = document.getElementById("logContent");
@@ -112,6 +26,66 @@ const register = document.getElementById("regbtn");
 const cancel = document.getElementById("cancel");
 const cancelReg = document.getElementById("cancelReg");
 const regbtn2 = document.getElementById("regbtn2");
+const inputs = document.querySelectorAll('.inputx input');
+const forms = document.querySelectorAll('form');
+
+function invalidInput() {
+    inputs.forEach(input => {
+        const line = input.parentElement.querySelector('.line');
+        const span = input.parentElement.querySelector('span');
+        if (input.value.trim() !== '' && !input.validity.valid) {
+            if (line && span) {
+                line.style.backgroundColor = '#f00';
+                line.style.height = '44px';
+                span.style.transform = 'translateX(0px) translateY(-34px)';
+                span.style.fontSize = '12px';
+                span.style.color = '#f00';
+            }
+        }
+        else {
+            if (line && span) {
+                line.style.backgroundColor = '';
+                line.style.height = '';
+                span.style.transform = '';
+                span.style.fontSize = '';
+                span.style.color = '';
+            }
+        }
+    });
+}
+
+inputs.forEach(input => {
+    input.addEventListener('input', invalidInput);
+});
+
+function clearInput() {
+    forms.forEach(form => {
+        let inputs = form.querySelectorAll('input:not([type="submit"])');
+        inputs.forEach(input => {
+            input.value = '';
+            const line = input.parentElement.querySelector('.line');
+            const span = input.parentElement.querySelector('span');
+            if (line && span) {
+                line.style.backgroundColor = '';
+                line.style.height = '';
+                span.style.transform = '';
+                span.style.fontSize = '';
+                span.style.color = '';
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    clearInput();
+})
+
+window.addEventListener('pageshow', e => {
+    if (e.persisted || (window.performance && window.performance.navigation.type == 2)) {
+        clearInput();
+    }
+});
+
 /*
 const buttons = document.getElementById("main");
 buttons.addEventListener("click", e => {
@@ -139,6 +113,7 @@ window.addEventListener("load", () => {
 */
 login.addEventListener("click", e => {
     if (e.target.matches("button")) {
+        console.log(e);
         if(regScreen.style.display === "block") {
             closeRegScreen();
             setTimeout(() => {
@@ -181,15 +156,18 @@ cancelReg.addEventListener("click", () => {
 });
 
 function openLogScreen() {
+    clearInput();
     logContent.classList.remove("fadeOut");
     loginScreen.style.display = "block";
 }
 function openRegScreen() {
+    clearInput();
     regContent.classList.remove("fadeOut");
     regScreen.style.display = "block";
 }
 
 function closeLogScreen() {
+    clearInput();
     logContent.classList.add("fadeOut");
     setTimeout(() => {
         loginScreen.style.display = "none";
@@ -197,6 +175,7 @@ function closeLogScreen() {
 }
 
 function closeRegScreen() {
+    clearInput();
     regContent.classList.add("fadeOut");
     setTimeout(() => {
         regScreen.style.display = "none";
@@ -219,7 +198,7 @@ function regHref() {
 }
 
 
-//PASSWORD VİSİBİLİTY
+//PASSWORD VISIBILITY
 const toggles = document.querySelectorAll(".toggle");
 const icons = document.querySelectorAll(".icon");
 let passwordInput = document.querySelectorAll(".passwordInput");
@@ -297,11 +276,9 @@ document.getElementById("register").addEventListener("submit", function (e) {
         return;
     }
 
-
-
-
 });
 */
+/*
 const errorContainer = document.getElementById("errorContainer");
 
 function displayError(errorMessage) {
@@ -326,20 +303,6 @@ function checkEmailStatus(email) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 regScreen.addEventListener("submit", e => {
     e.preventDefault();
 
@@ -402,4 +365,272 @@ function displayError(errorMessage) {
     errorContainer.appendChild(errorSpan);
 
 }
+*/
+
+//SEARCH BAR TYPEWRİTER
+let textSpan = document.getElementById('typeWriter');
+let wordIndex = 0;
+let colorIndex = 0;
+let isDeleting = false;
+let text = textSpan.getAttribute('data-words').split(',');
+let delay = parseInt(textSpan.getAttribute('data-delay'));
+let deleteDelay = parseInt(textSpan.getAttribute('data-deletedelay'));
+let colors = textSpan.getAttribute("data-colors").split(",");
+
+let cursorSpan = document.querySelector(".cursor");;
+
+function startTyper() {
+
+    function positionCursor() {
+        let spanWidth = textSpan.getBoundingClientRect().width;
+        let getBound = textSpan.getBoundingClientRect();
+
+        cursorSpan.style.left = (getBound.left + spanWidth - 657) + 'px';
+    }
+
+    function type() {
+        let currentText = text[wordIndex];
+        let currentColor = colors[colorIndex];
+        textSpan.style.color = currentColor;
+
+        let alter = isDeleting ? textSpan.textContent.length - 1 : textSpan.textContent.length + 1;
+        let typedText = currentText.substring(0, alter);
+        textSpan.textContent = typedText;
+
+        positionCursor();
+
+        if (!isDeleting && textSpan.textContent === currentText) {
+            isDeleting = true;
+            setTimeout(type, deleteDelay);
+        }
+        else if (isDeleting && textSpan.textContent === '') {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % text.length;
+            colorIndex = (colorIndex + 1) % colors.length;
+            setTimeout(type, 750);
+        }
+        else {
+            setTimeout(type, delay);
+        }
+    }
+    setTimeout(type, delay);
+}
+/*
+function resetTyper() {
+    textSpan.textContent = '';
+    wordIndex = 0;
+    colorIndex = 0;
+    isDeleting = false;
+    delay = parseInt(textSpan.getAttribute('data-delay'));
+    deleteDelay = parseInt(textSpan.getAttribute('data-deletedelay'));
+    function positionCursor() {
+        let spanWidth = textSpan.getBoundingClientRect().width;
+        let getBound = textSpan.getBoundingClientRect();
+        cursorSpan.style.left = (getBound.left + spanWidth - 668) + 'px';
+    }
+    function type() {
+        let currentText = text[wordIndex];
+        let currentColor = colors[colorIndex];
+        textSpan.style.color = currentColor;
+        let alter = isDeleting ? textSpan.textContent.length - 1 : textSpan.textContent.length + 1;
+        let typedText = currentText.substring(0, alter);
+        textSpan.textContent = typedText;
+        positionCursor();
+        if (!isDeleting && textSpan.textContent === currentText) {
+            isDeleting = true;
+            //deleteDelay += deleteDelay;
+            setTimeout(type, deleteDelay);
+        }
+        else if (isDeleting && textSpan.textContent === '') {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % text.length;
+            colorIndex = (colorIndex + 1) % colors.length;
+            //someDelay += someDelay;
+            setTimeout(type, someDelay);
+        }
+        else {
+            //delay += delay;
+            setTimeout(type, delay);
+        }
+    }
+    //delay += delay;
+    setTimeout(type, delay);
+}
+*/
+//initial function for to use startTyper function everywhere
+function initTyper() {
+    startTyper();
+}
+
+document.addEventListener('DOMContentLoaded', initTyper());
+
+//SEARCH BAR
+const searchBar = document.getElementById('searchBar');
+const search = document.getElementById('search');
+const typer = document.getElementById('typer');
+
+//Search Bar visibility
+search.addEventListener('click', () => {
+    typer.style.display = 'none';
+    searchBar.focus();
+});
+
+searchBar.addEventListener('focus', () => {
+    //
+});
+
+searchBar.addEventListener('blur', () => {
+    if (searchBar.value === '') {
+        typer.style.display = 'block';
+        isDisplaying = typer.style.display === 'block';
+    }
+});
+
+//Search Bar api function
+const currentPage = document.getElementById('currentPage');
+const searchInput = document.getElementById('searchBar');
+const movieContainer = document.getElementById('searchResponse');
+const BASE_URL = 'http://localhost/moviesite/';
+
+window.addEventListener('pageshow', e => {
+    if (e.persisted || (window.performance && window.performance.navigation.type == 2)) {
+        searchInput.value = '';
+    }
+});
+
+searchInput.addEventListener('keyup', e => {
+    if (e.key === 'Enter') {
+        if (searchInput.value.trim() !== '') {
+            currentPage.style.display = 'none';
+            movieContainer.style.display = 'block';
+            searchMovies();
+        }
+        else {
+            currentPage.style.display = 'block';
+            movieContainer.style.display = 'none';
+        }
+    }
+});
+
+function searchMovies() {
+    let searchTerm = searchInput.value;
+    fetch(`${BASE_URL}getData.php?search=${searchTerm}`)
+        .then(response => response.json())
+        .then(data => {
+
+            movieContainer.innerHTML = '';
+
+            data.forEach(movie => {
+
+                const itemx = document.createElement('div');
+                itemx.classList.add('itemx');
+
+                const filmPoster = document.createElement('div');
+                filmPoster.classList.add('film-posterx');
+
+                const img = document.createElement('img');
+                img.src = `${BASE_URL}${movie.posterUrl}`;
+                img.alt = movie.title;
+                console.log(img.src);
+
+                const aHref = document.createElement('a');
+
+                filmPoster.appendChild(img);
+                filmPoster.appendChild(aHref);
+
+                const filmDetail = document.createElement('div');
+                filmDetail.classList.add('film-detailx');
+
+                const fdInfor = document.createElement('div');
+                fdInfor.classList.add('fd-infor');
+                
+                const fdiItem1 = document.createElement('span');
+                fdiItem1.classList.add('fdi-item');
+                fdiItem1.innerHTML = `
+                    <i class="fas fa-star mr-1"></i>
+                    ${movie.imdb}
+                `;
+
+                const fdiItem2 = document.createElement('span');
+                fdiItem2.classList.add('fdi-item');
+                fdiItem2.innerHTML = `<strong>HD</strong>`;
+
+                const fdiItem3 = document.createElement('span');
+                fdiItem3.classList.add('fdi-item');
+                fdiItem3.innerHTML = `${movie.releaseYear}`;
+
+                fdInfor.appendChild(fdiItem1);
+                fdInfor.appendChild(fdiItem2);
+                fdInfor.appendChild(fdiItem3);
+
+                const filmName = document.createElement('h3');
+                filmName.classList.add('film-name');
+                const filmNameA = document.createElement('a');
+                filmNameA.href = `${BASE_URL}${movie.nav}`;
+                filmNameA.title = movie.title;
+                filmNameA.textContent = movie.title;
+                filmName.appendChild(filmNameA);
+
+                const fdBtn = document.createElement('div');
+                fdBtn.classList.add('fd-btnx');
+                const btnA = document.createElement('a');
+                btnA.href = `${BASE_URL}${movie.nav}`;
+                console.log(btnA.href);
+                btnA.classList.add('btn', 'btn-sm', 'btn-play', 'btn-secondary');
+                btnA.innerHTML = `
+                    <i class="fas fa-play mr-3"></i>
+                    Şimdi İzle
+                `;
+                fdBtn.appendChild(btnA);
+
+                filmDetail.appendChild(fdInfor);
+                filmDetail.appendChild(filmName);
+                filmDetail.appendChild(fdBtn);
+                
+                itemx.appendChild(filmPoster);
+                itemx.appendChild(filmDetail);
+
+                movieContainer.appendChild(itemx);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+/*
+//SITE STRUCTURE
+//const body = document.querySelector('body');
+//const mainHeight = document.querySelector('main').offsetHeight;
+let footer = document.querySelector('footer');
+const windowHeight = window.innerHeight;
+let mainContent = document.getElementById('main');
+const children = mainContent.children;
+
+//Main
+function alterMainPos() {
+    //let totalContentHeight = mainContent.scrollHeight + 'px';
+    let totalHeight = 0;
+
+    for (let i = 0; i < children.length; i++) {
+        totalHeight += children[i].offsetHeight;
+    }
+
+    //body.style.height = totalContentHeight;
+    mainContent.style.height = totalHeight + 'px';
+}
+
+//Footer
+function alterFooterPos() {
+    if (mainHeight < windowHeight) {
+        footer.style.position = 'absolute';
+        footer.style.bottom = '0';
+    }
+}
+
+window.addEventListener('load', () => {
+    //alterFooterPos();
+    //alterMainPos();
+});
+window.addEventListener('resize', () => {
+    //alterFooterPos();
+    //alterMainPos();
+});
 */

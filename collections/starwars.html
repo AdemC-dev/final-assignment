@@ -4,146 +4,226 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Wars</title>
-    <link rel="stylesheet" type="text/css" href="/vsCode/final-assingment/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A/10nwdMOWrSz20fDsjczgUidUBR/10liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="author" content="ranexcdev">
+    <title>Nandalf Movies</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="main">
-        <div id="header-scroll">
-            <header class="header">
+        <div id="header-scroll" class="row">
+            <header class="header col-12">
                 <div class="logo">
-                    <a href="/vsCode/final-assingment/index.html"><img src="/vsCode/final-assingment/images/logo.png" alt="logo"></a>
+                    <a href="../logreg.php"><img src="../images/siteLogoR.png" alt="logo"></a>
                 </div>
                 <nav class="navigation">
-                    <fieldset class="fields">
-                    <a href="/vsCode/final-assingment/index.html">Anasayfa</a>
-                    </fieldset>
-                    <div class="dropdown">
+                    <div class="navLinks">
                         <fieldset class="fields">
-                            <button class="dropbtn">Filmler
-                                <i class="fa fa-caret-down"></i>
-                            </button>
+                        <a href="../logreg.php">Anasayfa</a>
                         </fieldset>
-                        <div class="dropdown-content" id="f">
-                            <div class="drpleft" id="fx">
-                                <a href="/vsCode/final-assingment/türler/aile.html" class="drpa">Aile</a>
-                                <a href="/vsCode/final-assingment/türler/aksiyon.html" class="drpa">Aksiyon</a>
-                                <a href="/vsCode/final-assingment/türler/animasyon.html" class="drpa">Animasyon</a>
-                                <a href="/vsCode/final-assingment/türler/bilimkurgu.html" class="drpa">Bilim Kurgu</a>
-                                <a href="/vsCode/final-assingment/türler/dram.html" class="drpa">Dram</a>
-                                <a href="/vsCode/final-assingment/türler/fantastik.html" class="drpa">Fantastik</a>
-                                <a href="/vsCode/final-assingment/türler/gerilim.html" class="drpa">Gerilim</a>
-                                <a href="/vsCode/final-assingment/türler/gizem.html" class="drpa">Gizem</a>
-                                <a href="/vsCode/final-assingment/türler/komedi.html" class="drpa">Komedi</a>
-                                <a href="/vsCode/final-assingment/türler/korku.html" class="drpa">Korku</a>
-                            </div>
-                            <div class="drpright" id="fx">
-                                <a href="/vsCode/final-assingment/türler/macera.html" class="drpa">Macera</a>
-                                <a href="/vsCode/final-assingment/türler/müzikal.html" class="drpa">Müzikal</a>
-                                <a href="/vsCode/final-assingment/türler/polisiye.html" class="drpa">Polisiye</a>
-                                <a href="/vsCode/final-assingment/türler/belgesel.html" class="drpa">Belgesel</a>
-                                <a href="/vsCode/final-assingment/türler/romantik.html" class="drpa">Romantik</a>
-                                <a href="/vsCode/final-assingment/türler/savas.html" class="drpa">Savaş</a>
-                                <a href="/vsCode/final-assingment/türler/spor.html" class="drpa">Spor</a>
-                                <a href="/vsCode/final-assingment/türler/suc.html" class="drpa">Suç</a>
-                                <a href="/vsCode/final-assingment/türler/tarihi.html" class="drpa">Tarihi</a>
-                                <a href="/vsCode/final-assingment/türler/western.html" class="drpa">Western</a>
+                        <div class="dropdown">
+                            <fieldset class="fields">
+                                <button class="dropbtn">Filmler
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </fieldset>
+                            <div class="dropdown-content" id="f">
+                                <div class="drpleft" id="fx">
+                                    <a href="../türler/aile.html" class="drpa">Aile</a>
+                                    <a href="../türler/aksiyon.html" class="drpa">Aksiyon</a>
+                                    <a href="../türler/animasyon.html" class="drpa">Animasyon</a>
+                                    <a href="../türler/bilimkurgu.html" class="drpa">Bilim Kurgu</a>
+                                    <a href="../türler/dram.html" class="drpa">Dram</a>
+                                    <a href="../türler/fantastik.html" class="drpa">Fantastik</a>
+                                    <a href="../türler/gerilim.html" class="drpa">Gerilim</a>
+                                    <a href="../türler/gizem.html" class="drpa">Gizem</a>
+                                    <a href="../türler/komedi.html" class="drpa">Komedi</a>
+                                    <a href="../türler/korku.html" class="drpa">Korku</a>
+                                </div>
+                                <div class="drpright" id="fx">
+                                    <a href="../türler/macera.html" class="drpa">Macera</a>
+                                    <a href="../türler/müzikal.html" class="drpa">Müzikal</a>
+                                    <a href="../türler/polisiye.html" class="drpa">Polisiye</a>
+                                    <a href="../türler/belgesel.html" class="drpa">Belgesel</a>
+                                    <a href="../türler/romantik.html" class="drpa">Romantik</a>
+                                    <a href="../türler/savas.html" class="drpa">Savaş</a>
+                                    <a href="../türler/spor.html" class="drpa">Spor</a>
+                                    <a href="../türler/suc.html" class="drpa">Suç</a>
+                                    <a href="../türler/tarihi.html" class="drpa">Tarihi</a>
+                                    <a href="../türler/western.html" class="drpa">Western</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="dropdown">
-                        <fieldset class="fields">
-                            <button class="dropbtn">Diziler
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                        </fieldset>
-                        <div class="dropdown-content" id="d">
-                            <div class="drpleft" id="dx">
-                                <a href="#" class="drpa">Aile</a>
-                                <a href="#" class="drpa">Aksiyon</a>
-                                <a href="#" class="drpa">Animasyon</a>
-                                <a href="#" class="drpa">Bilim Kurgu</a>
-                                <a href="#" class="drpa">Dram</a>
-                                <a href="#" class="drpa">Fantastik</a>
-                                <a href="#" class="drpa">Gerilim</a>
-                                <a href="#" class="drpa">Gizem</a>
-                                <a href="#" class="drpa">Komedi</a>
-                                <a href="#" class="drpa">Korku</a>
-                            </div>
-                            <div class="drpright" id="dx">
-                                <a href="#" class="drpa">Macera</a>
-                                <a href="#" class="drpa">Müzikal</a>
-                                <a href="#" class="drpa">Polisiye</a>
-                                <a href="#" class="drpa">Belgesel</a>
-                                <a href="#" class="drpa">Romantik</a>
-                                <a href="#" class="drpa">Savaş</a>
-                                <a href="#" class="drpa">Spor</a>
-                                <a href="#" class="drpa">Suç</a>
-                                <a href="#" class="drpa">Tarihi</a>
-                                <a href="#" class="drpa">Western</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <fieldset class="fields">
-                            <button class="dropbtn">Yapım Yılı
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                        </fieldset>
-                        <div class="dropdown-content" id="y">
-                            <div class="drpleft" id="yx">
-                                <a href="#" class="drpa">2000</a>
-                                <a href="#" class="drpa">2001</a>
-                                <a href="#" class="drpa">2002</a>
-                                <a href="#" class="drpa">2003</a>
-                                <a href="#" class="drpa">2005</a>
-                                <a href="#" class="drpa">2006</a>
-                                <a href="#" class="drpa">2007</a>
-                                <a href="#" class="drpa">2008</a>
-                                <a href="#" class="drpa">2009</a>
-                                <a href="#" class="drpa">2010</a>
-                            </div>
-                            <div class="drpright" id="yx">
-                                <a href="#" class="drpa">2011</a>
-                                <a href="#" class="drpa">2012</a>
-                                <a href="#" class="drpa">2013</a>
-                                <a href="#" class="drpa">2014</a>
-                                <a href="#" class="drpa">2015</a>
-                                <a href="#" class="drpa">2016</a>
-                                <a href="#" class="drpa">2017</a>
-                                <a href="#" class="drpa">2018</a>
-                                <a href="#" class="drpa">2019</a>
-                                <a href="#" class="drpa">2020</a>
+                        <div class="dropdown">
+                            <fieldset class="fields">
+                                <button class="dropbtn">Diziler
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </fieldset>
+                            <div class="dropdown-content" id="d">
+                                <div class="drpleft" id="dx">
+                                    <a href="../diziler/aile.html" class="drpa">Aile</a>
+                                    <a href="../diziler/aksiyon.html" class="drpa">Aksiyon</a>
+                                    <a href="../diziler/animasyon.html" class="drpa">Animasyon</a>
+                                    <a href="../diziler/bilimkurgu.html" class="drpa">Bilim Kurgu</a>
+                                    <a href="../diziler/dram.html" class="drpa">Dram</a>
+                                    <a href="../diziler/fantastik.html" class="drpa">Fantastik</a>
+                                    <a href="../diziler/gerilim.html" class="drpa">Gerilim</a>
+                                    <a href="../diziler/gizem.html" class="drpa">Gizem</a>
+                                    <a href="../diziler/komedi.html" class="drpa">Komedi</a>
+                                    <a href="../diziler/korku.html" class="drpa">Korku</a>
+                                </div>
+                                <div class="drpright" id="dx">
+                                    <a href="../diziler/macera.html" class="drpa">Macera</a>
+                                    <a href="../diziler/müzikal.html" class="drpa">Müzikal</a>
+                                    <a href="../diziler/polisiye.html" class="drpa">Polisiye</a>
+                                    <a href="../diziler/belgesel.html" class="drpa">Belgesel</a>
+                                    <a href="../diziler/romantik.html" class="drpa">Romantik</a>
+                                    <a href="../diziler/savas.html" class="drpa">Savaş</a>
+                                    <a href="../diziler/spor.html" class="drpa">Spor</a>
+                                    <a href="../diziler/suc.html" class="drpa">Suç</a>
+                                    <a href="../diziler/tarihi.html" class="drpa">Tarihi</a>
+                                    <a href="../diziler/western.html" class="drpa">Western</a>
+                                </div>
                             </div>
                         </div>
+                        <div class="dropdown">
+                            <fieldset class="fields">
+                                <button class="dropbtn">Yapım Yılı
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                            </fieldset>
+                            <div class="dropdown-content" id="y">
+                                <div class="drpleft" id="yx">
+                                    <a href="../ReleaseYear/2000.html" class="drpa">2000</a>
+                                    <a href="../ReleaseYear/2001.html" class="drpa">2001</a>
+                                    <a href="../ReleaseYear/2002.html" class="drpa">2002</a>
+                                    <a href="../ReleaseYear/2003.html" class="drpa">2003</a>
+                                    <a href="../ReleaseYear/2004.html" class="drpa">2004</a>
+                                    <a href="../ReleaseYear/2005.html" class="drpa">2005</a>
+                                    <a href="../ReleaseYear/2006.html" class="drpa">2006</a>
+                                    <a href="../ReleaseYear/2007.html" class="drpa">2007</a>
+                                    <a href="../ReleaseYear/2008.html" class="drpa">2008</a>
+                                    <a href="../ReleaseYear/2009.html" class="drpa">2009</a>
+                                </div>
+                                <div class="drpright" id="yx">
+                                    <a href="../ReleaseYear/2010.html" class="drpa">2010</a>
+                                    <a href="../ReleaseYear/2011.html" class="drpa">2011</a>
+                                    <a href="../ReleaseYear/2012.html" class="drpa">2012</a>
+                                    <a href="../ReleaseYear/2013.html" class="drpa">2013</a>
+                                    <a href="../ReleaseYear/2014.html" class="drpa">2014</a>
+                                    <a href="../ReleaseYear/2015.html" class="drpa">2015</a>
+                                    <a href="../ReleaseYear/2016.html" class="drpa">2016</a>
+                                    <a href="../ReleaseYear/2017.html" class="drpa">2017</a>
+                                    <a href="../ReleaseYear/2018.html" class="drpa">2018</a>
+                                    <a href="../ReleaseYear/2019.html" class="drpa">2019</a>
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset class="fields">
+                        <a href="../pages/packeges.html">Film Koleksiyonları</a>
+                        </fieldset>
+                        <fieldset class="fields">
+                        <a href="../pages/goats.html">En iyiler</a>
+                        </fieldset>
+                        </div>
+                    <div class="search" id="search" >
+                        <input type="text" id="searchBar" >
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <h1 class="typer" id="typer">
+                            <span class="typeWriter" id="typeWriter" data-delay="150" data-deletedelay="1500" data-words="Lord of the Rings,Star Wars,Game of Thrones, The Originals, Breaking Bad" data-colors="#000,#000"></span>
+                            <span class="cursor" data-owner="typeWriter">|</span>
+                        </h1>
                     </div>
-                    <fieldset class="fields">
-                    <a href="/vsCode/final-assingment/pages/packeges.html">Film Koleksiyonları</a>
-                    </fieldset>
-                    <fieldset class="fields">
-                    <a href="/vsCode/final-assingment/pages/goats.html">En iyiler</a>
-                    </fieldset>
                 </nav>
-                <div class="user_log">
-                    <a href=""><button class="logreg">GİRİŞ YAP</button></a>
-                    <a href=""><button class="logreg">KAYIT OL</button></a>
+                <div class="userLog" id="userLog">
+                    <button class="logreg" id="logbtn">GİRİŞ YAP</button>
+                    <button class="logreg margin" id="regbtn">KAYIT OL</button>
                 </div>
-                <div class="search">
-                    <input type="text" placeholder="Dizi ve Film Ara...">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </div>
-            </header>
+            </header> 
+        </div>
+        <div class="screens">
+            <div class="loginScreen" id="login">
+                <form method="post" class="content fadeIn" id="logContent">
+                    <h2>Giriş Yap</h2>
+                    
+                    
+                    <div class="errorContainer"></div>
+                    <div class="inputx">
+                        <input type="email" name="email" id="emailLog" required>
+                        <span>Email</span>
+                        <i class="line"></i>
+                    </div>
+                    <div class="inputx">
+                        <input type="password" name="pswd" id="pswdLog" class="passwordInput" required>
+                        <button type="button" id="togglelogBtn" class="toggle">
+                            <i id="eyeIcon" class="fa-solid fa-eye fa-lg icon"></i>
+                        </button>
+                        <span>Şifre</span>
+                        <i class="line"></i>
+                    </div>
+                    <div class="log-nav">
+                        <a href="#">Şifremi Unuttum</a>
+                        <a id="regbtn2" onclick = "regHref()">Kayıt Ol</a>
+                    </div>
+                    <div class="actionBtn">
+                        <button id="cancel" type="button" formnovalidate>İptal</button>
+                        <input type="submit" value="Giriş Yap" name="logSubmit" id="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="regScreen" id="register">
+                <form method="post" class="content fadeIn" id="regContent">
+                    <h2>Kayıt Ol</h2>
+                    
+                    <!--<div class="errorContainer"></div>-->
+                    <div class="inputx">
+                        <input type="text" name="userName" id="userName" required>
+                        <span>Kullanıcı Adı</span>
+                        <i class="line"></i>
+                    </div>
+                    <div class="inputx">
+                        <input type="email" name="email" id="emailReg" required>
+                        <span>E-posta</span>
+                        <i class="line"></i>
+                    </div>
+                    <div class="inputx">
+                        <input type="password" name="pswd" id="pswdReg" class="passwordInput" required>
+                        <button type="button" id="toggleregBtn" class="toggle">
+                            <i id="eyeIcon" class="fa-solid fa-eye fa-lg icon"></i>
+                        </button>
+                        <span>Şifre</span>
+                        <i class="line"></i>
+                    </div>
+                    <div class="inputx">
+                        <input type="password" name="pswdVerify" id="pswdVerify" class="passwordInput" required>
+                        <button type="button" id="toggleregverBtn" class="toggle">
+                            <i id="eyeIcon" class="fa-solid fa-eye fa-lg icon"></i>
+                        </button>
+                        <span>Şifreyi Onayla</span>
+                        <i class="line"></i>
+                    </div>
+                    <div class="log-nav">
+                        <a href="#">Şifremi Unuttum</a>
+                    </div>
+                    <div class="actionBtn">
+                        <button id="cancelReg" type="button" formnovalidate>İptal</button>
+                        <input type="submit" value="Kayıt Ol" id="submit" name="regSubmit">
+                    </div>
+                </form>
+            </div>
         </div>
         <main>
-            <section class="movie-sectionx">
+            <section class="movie-section" id="currentPage">
                 <div class="movie-variety">
                     <div id="trending-movies">
                         <div class="film-list-wrap">
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/yildiz-savaslari-yeni-umut-izle.webp" alt="">
+                                    <img src="../images/thumbnails/yildiz-savaslari-yeni-umut-izle.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -174,7 +254,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/obi-wan-kenobi.webp" alt="">
+                                    <img src="../images/thumbnails/obi-wan-kenobi.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -205,7 +285,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/lego-star-wars-summer-vacation.webp" alt="">
+                                    <img src="../images/thumbnails/lego-star-wars-summer-vacation.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -236,7 +316,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/andor.jpg" alt="">
+                                    <img src="../images/thumbnails/andor.jpg" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -267,7 +347,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/star-wars-tales-of-the-jedi.webp" alt="">
+                                    <img src="../images/thumbnails/star-wars-tales-of-the-jedi.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -298,7 +378,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/the-bad-batch.webp" alt="">
+                                    <img src="../images/thumbnails/the-bad-batch.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -329,7 +409,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/star-wars-visions.webp" alt="">
+                                    <img src="../images/thumbnails/star-wars-visions.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -360,7 +440,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/the-book-of-boba-fett.webp" alt="">
+                                    <img src="../images/thumbnails/the-book-of-boba-fett.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -391,7 +471,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/lego-star-wars-terrifying-tales.webp" alt="">
+                                    <img src="../images/thumbnails/lego-star-wars-terrifying-tales.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -422,7 +502,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/mandaloryali-izle.webp" alt="">
+                                    <img src="../images/thumbnails/mandaloryali-izle.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -453,7 +533,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/8-rogue-one-bir-star-wars-hikayesi-hd-film-izle.jpg" alt="">
+                                    <img src="../images/thumbnails/8-rogue-one-bir-star-wars-hikayesi-hd-film-izle.jpg" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -484,7 +564,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/star-wars-son-jedi-film-izle.jpg" alt="">
+                                    <img src="../images/thumbnails/star-wars-son-jedi-film-izle.jpg" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -515,7 +595,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/hd-star-wars-guc-uyaniyor-1080p-izle.jpg" alt="">
+                                    <img src="../images/thumbnails/hd-star-wars-guc-uyaniyor-1080p-izle.jpg" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -546,7 +626,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/hd-film-han-solo-bir-star-wars-hikayesi-izle.webp" alt="">
+                                    <img src="../images/thumbnails/hd-film-han-solo-bir-star-wars-hikayesi-izle.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -577,7 +657,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/star-wars-asiler-izle.webp" alt="">
+                                    <img src="../images/thumbnails/star-wars-asiler-izle.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -608,7 +688,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/star-wars-the-clone-wars.webp" alt="">
+                                    <img src="../images/thumbnails/star-wars-the-clone-wars.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -639,7 +719,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/yildiz-savaslari-bolum-iii-sithin-intikami-izle.webp" alt="">
+                                    <img src="../images/thumbnails/yildiz-savaslari-bolum-iii-sithin-intikami-izle.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -670,7 +750,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/star-wars-the-clone-wars.webp" alt="">
+                                    <img src="../images/thumbnails/star-wars-the-clone-wars.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -701,7 +781,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/yildiz-savaslari-bolum-i-gizli-tehlike-izle.webp" alt="">
+                                    <img src="../images/thumbnails/yildiz-savaslari-bolum-i-gizli-tehlike-izle.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -732,7 +812,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/yildiz-savaslari-jedinin-donusu-izle.webp" alt="">
+                                    <img src="../images/thumbnails/yildiz-savaslari-jedinin-donusu-izle.webp" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -763,7 +843,7 @@
                             </div>
                             <div class="itemx">
                                 <div class="film-posterx">
-                                    <img src="/vsCode/final-assingment/images/thumbnails/yildiz-savaslari-imparatorun-donusu-izle.jpg" alt="">
+                                    <img src="../images/thumbnails/yildiz-savaslari-imparatorun-donusu-izle.jpg" alt="">
                                     <a href=""></a>
                                 </div>
                                 <div class="film-detailx">
@@ -796,46 +876,47 @@
                     </div>
                 </div>
             </section>
+            <div class="movieContainer" id="searchResponse"></div>
         </main>
-        <footer class="footer" id="spfoot3">
+        <footer class="footer row col-12" id="footer">
             <div class="footer-links">
-                <ul>
+                <ul id="misc" >
                     <li>
-                        <a href="#">Android Uygulaması</a>
+                        <a href="https://play.google.com/store/games?hl=tr&gl=US" target="_blank">Android Uygulaması</a>
                     </li>
                     <li>
-                        <a href="#">Kullanım Koşulları</a>
+                        <a href="footer/sartlar.html" target="_blank">Kullanım Koşulları</a>
                     </li>
                     <li>
-                        <a href="#">İletişim</a>
+                        <a href="footer/iletisim.html" target="_blank">Başvuru İçin</a>
                     </li>
                     <li>
-                        <a href="#">Site Haritası</a>
+                        <a href="footer/sitemap.html" target="_blank">Site Haritası</a>
                     </li>
                 </ul>
-                <ul class="social">
+                <ul id="socials" >
                     <li>
-                        <a href=""><i class="fab fa-instagram"></i> İnstagram</a>
+                        <a href="https://www.instagram.com/ranexcdev/" target="_blank"><i class="fab fa-instagram"></i> İnstagram</a>
                     </li>
                     <li>
-                        <a href=""><i class="fab fa-facebook-square"></i> Facebook</a>
+                        <a href="https://tr-tr.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
                     </li>
                     <li>
-                        <a href=""><i class="fab fa-twitter-square"></i> Twitter</a>
+                        <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
                     </li>
                     <li>
-                        <a href=""><i class="fab fa-reddit-square"></i> Reddit</a>
+                        <a href="https://www.reddit.com/" target="_blank"><i class="fab fa-reddit-square"></i> Reddit</a>
                     </li>
                 </ul>
             </div>
             <div class="footer-about">
                 <div class="about-text">
-                   estelelenathmovies.com reklamsız ve ücretsiz bir film akış sitesidir. Biz size 10000 üzerin de film ve diziyi herhangi bir ücret ödemeden ya da hesap oluşturmadan online izleme imkanı sunuyoruz. Ayrıca isterseniz daha sonra izlemek için filmleri MoviesCloud'dan indirebilirsizin.
+                    nandalfmovies 10.000 üzerinde film veya diziyi herhangi bir ücret ödemeden ya da hesap oluşturmadan online izleme imkanı sunan reklamsız ve ücretsiz bir film akış sitesidir.
                 </div>
-                <p class="copyright">@estelelenathmovies.com</p>
+                <p class="copyright">@ranexcdev.com</p>
             </div>
         </footer>
-        <script type="text/javascript" src="/vsCode/final-assingment/script.js"></script>
+        <script type="text/javascript" src="../script.js"></script>
     </div>
 </body>
 </html>
