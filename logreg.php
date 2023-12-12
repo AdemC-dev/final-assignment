@@ -106,7 +106,7 @@ $conn->close();
                 <nav class="navigation">
                     <div class="navLinks">
                         <fieldset class="fields">
-                        <a href="logreg.php">Anasayfa</a>
+                        <a href="logged">Anasayfa</a>
                         </fieldset>
                         <div class="dropdown">
                             <fieldset class="fields">
@@ -208,7 +208,7 @@ $conn->close();
                             </div>
                         </div>
                         <fieldset class="fields">
-                        <a href="pages/packeges.html">Film Koleksiyonları</a>
+                        <a href="pages/packeges">Film Koleksiyonları</a>
                         </fieldset>
                         <fieldset class="fields">
                         <a href="pages/goats.html">En iyiler</a>

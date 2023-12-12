@@ -787,10 +787,8 @@ a
 {
     width: 1600px;
     height: 800px;
-    position: absolute;
-    top: 180px;
-    left: 8%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
+    margin: auto;
 }
 .player-header
 {
@@ -804,8 +802,7 @@ a
     width: 360px;
     height: 42px;
     padding-top: 4px;
-    position: absolute;
-    left: 38%;
+    margin: auto;
     border-radius: 20px 20px 0 0 ;
 }
 .player-header .head h2
@@ -832,6 +829,7 @@ a
     font-size: 20px;
     text-align: center;
     cursor: pointer;
+    margin: 5px 0 0 18px;
 }
 .player-body .nav1:hover
 {
@@ -849,17 +847,20 @@ a
 }
 .player
 {
+    padding-top: 30px;
+    background: #475B74;
     width: 100%;
     height: 715px;
     border-radius: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .player iframe
 {
-    position: absolute;
-    top: 87px;
-    left: 0;
-    width: 100%;
+    width: 97%;
     height: 715px;
+    border-radius: 5px;
 }
 /*.player 
 {
@@ -894,29 +895,29 @@ a
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0 0 0 0;
+    border-radius: 5px;
 }
 .player-info
 {
     background-color: #475B74;
     width: 1600px;
-    height: 650px;
-    position: absolute;
-    top: 982px;
-    left: 8%;
+    height: auto;
+    margin: auto;
 }
 .info-header
 {
     width: 100%;
     height: 42px;
     text-align: left;
-    padding: 15px 0 0 40px;
+    padding: 30px 0 20px 40px;
 }
 .info-body
 {
     background-color: #475B74;
     width: 100%;
-    height: 70px;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 .movie-img
 {
@@ -926,16 +927,16 @@ a
 .movie-img img
 {
     width: 250px;
-    height: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 .movie-info
 {
     background-color: #475B74;
     width: 1300px;
-    height: 590px;
-    position: absolute;
-    top: 60px;
-    left: 300px;
+    height: auto;
+    padding: 7px 0 0 0;
+    font-size: 20px;
 }
 .movie-info p
 {
@@ -945,6 +946,9 @@ hr
 {
     height: 1px;
     margin: 20px 0 20px 0;
+}
+.infos {
+    padding: 0 0 0 10px;
 }
 .info
 {
@@ -1012,10 +1016,10 @@ strong, span
 {
     background-color: #475B74;
     width: 1600px;
-    height: 400px;
-    position: absolute;
-    top: 1632px;
-    left: 8%;
+    height: auto;
+    margin: auto;
+    padding-top: 30px;
+    border-radius: 0 0 20px 20px;
 }
 #sug
 {

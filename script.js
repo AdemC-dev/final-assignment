@@ -81,23 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 window.addEventListener('pageshow', e => {
-    if (e.persisted || (window.performance && window.performance.navigation.type == 2)) {
+    if (e.persisted || (window.performance && window.PerformanceNavigationTiming.type === 'back_forward')) {
         clearInput();
     }
 });
-
-/*
-const buttons = document.getElementById("main");
-buttons.addEventListener("click", e => {
-  if(e.target.matches("button")) {
-    openLogScreen();
-  }
-
-  if(e.target.matches("cancel")) {
-    closeLogScreen();
-  }
-});
-*/
 /*
 register.addEventListener("click", () => {
     if(window.location.pathname.endsWith("main.php")) {
@@ -490,10 +477,23 @@ searchBar.addEventListener('blur', () => {
 const currentPage = document.getElementById('currentPage');
 const searchInput = document.getElementById('searchBar');
 const movieContainer = document.getElementById('searchResponse');
-const BASE_URL = 'http://localhost/moviesite/';
+const BASE_URL = 'http://localhost/NandalfMovies.com/';
+
+const navEntries = window.performance.getEntriesByType('navigation');
+
+navEntries.forEach((entry) => {
+    if (entry) {
+        navType = entry.type;
+    }
+    else {
+        console.log('Herhangi bir navigasyon işlemi yapılmadı!')
+    }
+});
+
 
 window.addEventListener('pageshow', e => {
-    if (e.persisted || (window.performance && window.performance.navigation.type == 2)) {
+    if (e.persisted || (window.performance && navType === 'back_forward')) {
+        console.log('if başarılı')
         searchInput.value = '';
     }
 });
@@ -593,7 +593,7 @@ function searchMovies() {
                 movieContainer.appendChild(itemx);
             });
         })
-        .catch(error => console.error('Error fetching data:', error));
+        .catch(error => console.error('Veri alırken hata oluştu!', error));
 }
 /*
 //SITE STRUCTURE
