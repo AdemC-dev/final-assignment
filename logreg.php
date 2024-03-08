@@ -16,7 +16,7 @@ if(isset($_POST['regSubmit'])) {
     $email = $conn->real_escape_string($_POST['email']);
     $pswd = $_POST['pswd'];
     $pswdVerify = $_POST['pswdVerify'];
-    $hashedPassword = password_hash($pswd, PASSWORD_DEFAULT);
+    $hashedPassword = password_hash($pswd, PASSWORD_ARGON2I);
 
     $getdata = "SELECT * FROM users WHERE email = '$email'";
     $query = $conn->query($getdata);
@@ -59,7 +59,7 @@ if(isset($_POST['logSubmit'])) {
         if ($query->num_rows > 0) {
             $row = $query->fetch_assoc();
             $hashedPassword = $row['pswd'];
-            //get the username for to know who logged
+            //get the username for to know who is logged
             $_SESSION['showName'] = $row['userName'];
             if (password_verify($pswd, $hashedPassword)) {
                 $_SESSION['email'] = $row['email'];
